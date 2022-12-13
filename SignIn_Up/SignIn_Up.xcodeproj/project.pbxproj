@@ -10,6 +10,8 @@
 		65D258474E83CCF7E25C2031 /* Pods_SignIn_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202053719874F68B80538D89 /* Pods_SignIn_Up.framework */; };
 		D2DEB2A029485E4C00B8238A /* SignIn_Up.docc in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */; };
 		D2DEB2A129485E4C00B8238A /* SignIn_Up.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DEB29E29485E4C00B8238A /* SignIn_Up.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */; };
+		D2DEB2AA2948684500B8238A /* NetworkReturnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		D2DEB29B29485E4C00B8238A /* SignIn_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignIn_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DEB29E29485E4C00B8238A /* SignIn_Up.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignIn_Up.h; sourceTree = "<group>"; };
 		D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SignIn_Up.docc; sourceTree = "<group>"; };
+		D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReturnModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,19 @@
 			isa = PBXGroup;
 			children = (
 				D2DEB29E29485E4C00B8238A /* SignIn_Up.h */,
+				D2DEB2AB29486D1E00B8238A /* NetworkSection */,
 				D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */,
 			);
 			path = SignIn_Up;
+			sourceTree = "<group>";
+		};
+		D2DEB2AB29486D1E00B8238A /* NetworkSection */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */,
+				D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */,
+			);
+			path = NetworkSection;
 			sourceTree = "<group>";
 		};
 		E936B2F0F3C7687173D0C8AC /* Pods */ = {
@@ -74,7 +88,6 @@
 				8B4164EEC1250D4F0D4307FD /* Pods-SignIn_Up.debug.xcconfig */,
 				814810A34A33B38799F3CC57 /* Pods-SignIn_Up.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,6 +197,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DEB2A029485E4C00B8238A /* SignIn_Up.docc in Sources */,
+				D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */,
+				D2DEB2AA2948684500B8238A /* NetworkReturnModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
