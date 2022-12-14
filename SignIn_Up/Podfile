@@ -7,11 +7,10 @@ target 'SignIn_Up' do
 
   # Pods for SignIn_Up
   # Pods for onban
-  # Moya/RxsSwift
-  pod 'Moya/RxSwift'
 
   # RxSwift
   pod 'RxSwift'
+  pod 'RxRelay'
 
   # Kakao
   pod 'KakaoSDKCommon' , '~> 2.11.1'

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE46492B05159D50DB0131D6 /* Pods_SignIn_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2FB20A8B69948AA7BC2BFA /* Pods_SignIn_Up.framework */; };
+		9AFB41C1CD618FD09B566A9C /* Pods_SignIn_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232C20CA14E747B8970412E9 /* Pods_SignIn_Up.framework */; };
 		D2DEB2A029485E4C00B8238A /* SignIn_Up.docc in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */; };
 		D2DEB2A129485E4C00B8238A /* SignIn_Up.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DEB29E29485E4C00B8238A /* SignIn_Up.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */; };
@@ -24,9 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		684A07562926622C92E4CDC7 /* Pods-SignIn_Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignIn_Up.release.xcconfig"; path = "Target Support Files/Pods-SignIn_Up/Pods-SignIn_Up.release.xcconfig"; sourceTree = "<group>"; };
-		BA2FB20A8B69948AA7BC2BFA /* Pods_SignIn_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignIn_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0BBABCDDFFAD2DC613C69C3 /* Pods-SignIn_Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignIn_Up.debug.xcconfig"; path = "Target Support Files/Pods-SignIn_Up/Pods-SignIn_Up.debug.xcconfig"; sourceTree = "<group>"; };
+		232C20CA14E747B8970412E9 /* Pods_SignIn_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignIn_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6E2986F67BA2AEA3225382 /* Pods-SignIn_Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignIn_Up.release.xcconfig"; path = "Target Support Files/Pods-SignIn_Up/Pods-SignIn_Up.release.xcconfig"; sourceTree = "<group>"; };
+		CFD072AEBA442B21956642C4 /* Pods-SignIn_Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignIn_Up.debug.xcconfig"; path = "Target Support Files/Pods-SignIn_Up/Pods-SignIn_Up.debug.xcconfig"; sourceTree = "<group>"; };
 		D2DEB29B29485E4C00B8238A /* SignIn_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignIn_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DEB29E29485E4C00B8238A /* SignIn_Up.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignIn_Up.h; sourceTree = "<group>"; };
 		D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SignIn_Up.docc; sourceTree = "<group>"; };
@@ -48,20 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46492B05159D50DB0131D6 /* Pods_SignIn_Up.framework in Frameworks */,
+				9AFB41C1CD618FD09B566A9C /* Pods_SignIn_Up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12BAF8DFF612437F068EA86B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				232C20CA14E747B8970412E9 /* Pods_SignIn_Up.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D2DEB29129485E4C00B8238A = {
 			isa = PBXGroup;
 			children = (
 				D2DEB29D29485E4C00B8238A /* SignIn_Up */,
 				D2DEB29C29485E4C00B8238A /* Products */,
 				E936B2F0F3C7687173D0C8AC /* Pods */,
-				D36C8A4AA9483BB9313DA4FF /* Frameworks */,
+				12BAF8DFF612437F068EA86B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,19 +141,11 @@
 			path = SignInSocial;
 			sourceTree = "<group>";
 		};
-		D36C8A4AA9483BB9313DA4FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BA2FB20A8B69948AA7BC2BFA /* Pods_SignIn_Up.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E936B2F0F3C7687173D0C8AC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0BBABCDDFFAD2DC613C69C3 /* Pods-SignIn_Up.debug.xcconfig */,
-				684A07562926622C92E4CDC7 /* Pods-SignIn_Up.release.xcconfig */,
+				CFD072AEBA442B21956642C4 /* Pods-SignIn_Up.debug.xcconfig */,
+				BD6E2986F67BA2AEA3225382 /* Pods-SignIn_Up.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2DEB2A429485E4C00B8238A /* Build configuration list for PBXNativeTarget "SignIn_Up" */;
 			buildPhases = (
-				13D8DEAF9163DE74C0E71006 /* [CP] Check Pods Manifest.lock */,
+				20EC0EEA0A28E3559B9DAA72 /* [CP] Check Pods Manifest.lock */,
 				D2DEB29629485E4C00B8238A /* Headers */,
 				D2DEB29729485E4C00B8238A /* Sources */,
 				D2DEB29829485E4C00B8238A /* Frameworks */,
@@ -226,7 +226,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13D8DEAF9163DE74C0E71006 /* [CP] Check Pods Manifest.lock */ = {
+		20EC0EEA0A28E3559B9DAA72 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,7 +395,7 @@
 		};
 		D2DEB2A529485E4C00B8238A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0BBABCDDFFAD2DC613C69C3 /* Pods-SignIn_Up.debug.xcconfig */;
+			baseConfigurationReference = CFD072AEBA442B21956642C4 /* Pods-SignIn_Up.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -424,7 +424,7 @@
 		};
 		D2DEB2A629485E4C00B8238A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 684A07562926622C92E4CDC7 /* Pods-SignIn_Up.release.xcconfig */;
+			baseConfigurationReference = BD6E2986F67BA2AEA3225382 /* Pods-SignIn_Up.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

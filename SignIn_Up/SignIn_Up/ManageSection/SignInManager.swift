@@ -6,13 +6,15 @@
 //
 
 import RxSwift
-import Moya
 
 open class SignInManager {
     
     let shared = SignInManager()
-    let normalWorker = NormalSignInWorker()
-    let kakaoWorker = KakaoSignInWorker()
+    private let normalWorker = NormalSignInWorker()
+    private let kakaoWorker = KakaoSignInWorker()
+    private let appleWorker = AppleSignInWorker()
+    
+    private let disposeBag = DisposeBag()
     
     private init() { }
     
@@ -33,5 +35,13 @@ extension SignInManager {
     
     func signInKakao(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
         return self.kakaoWorker.signIn(with: endPoint)
+    }
+    
+    func fetchAppleToken() -> Single<String> {
+        return self.appleWorker.fetchIdentityToken(with: disposeBag)
+    }
+    
+    func signInApple(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
+        return self.appleWorker.signIn(with: endPoint)
     }
 }
