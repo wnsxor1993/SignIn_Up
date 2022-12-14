@@ -12,6 +12,15 @@
 		D2DEB2A129485E4C00B8238A /* SignIn_Up.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DEB29E29485E4C00B8238A /* SignIn_Up.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */; };
 		D2DEB2AA2948684500B8238A /* NetworkReturnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */; };
+		D2DEB2B02949559400B8238A /* ValidityCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2AF2949559400B8238A /* ValidityCase.swift */; };
+		D2DEB2B329495ABB00B8238A /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2B229495ABB00B8238A /* SignInManager.swift */; };
+		D2DEB2B529495AC000B8238A /* ValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2B429495AC000B8238A /* ValidateManager.swift */; };
+		D2DEB2B92949629000B8238A /* NormalSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2B82949629000B8238A /* NormalSignInWorker.swift */; };
+		D2DEB2BB2949630D00B8238A /* AppleSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BA2949630D00B8238A /* AppleSignInWorker.swift */; };
+		D2DEB2BD2949631500B8238A /* KakaoSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BC2949631500B8238A /* KakaoSignInWorker.swift */; };
+		D2DEB2BF294989FD00B8238A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BE294989FD00B8238A /* EndPoint.swift */; };
+		D2DEB2C129498CC700B8238A /* URLConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2C029498CC700B8238A /* URLConfigure.swift */; };
+		D2DEB2C329498D7D00B8238A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +32,15 @@
 		D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SignIn_Up.docc; sourceTree = "<group>"; };
 		D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReturnModel.swift; sourceTree = "<group>"; };
+		D2DEB2AF2949559400B8238A /* ValidityCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidityCase.swift; sourceTree = "<group>"; };
+		D2DEB2B229495ABB00B8238A /* SignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
+		D2DEB2B429495AC000B8238A /* ValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateManager.swift; sourceTree = "<group>"; };
+		D2DEB2B82949629000B8238A /* NormalSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalSignInWorker.swift; sourceTree = "<group>"; };
+		D2DEB2BA2949630D00B8238A /* AppleSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInWorker.swift; sourceTree = "<group>"; };
+		D2DEB2BC2949631500B8238A /* KakaoSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInWorker.swift; sourceTree = "<group>"; };
+		D2DEB2BE294989FD00B8238A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		D2DEB2C029498CC700B8238A /* URLConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfigure.swift; sourceTree = "<group>"; };
+		D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				D2DEB29E29485E4C00B8238A /* SignIn_Up.h */,
+				D2DEB2B1294959C400B8238A /* ManageSection */,
+				D2DEB2AC29486E6400B8238A /* CaseSection */,
 				D2DEB2AB29486D1E00B8238A /* NetworkSection */,
 				D2DEB29F29485E4C00B8238A /* SignIn_Up.docc */,
 			);
@@ -78,8 +98,47 @@
 			children = (
 				D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */,
 				D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */,
+				D2DEB2BE294989FD00B8238A /* EndPoint.swift */,
+				D2DEB2C029498CC700B8238A /* URLConfigure.swift */,
 			);
 			path = NetworkSection;
+			sourceTree = "<group>";
+		};
+		D2DEB2AC29486E6400B8238A /* CaseSection */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEB2AF2949559400B8238A /* ValidityCase.swift */,
+				D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */,
+			);
+			path = CaseSection;
+			sourceTree = "<group>";
+		};
+		D2DEB2B1294959C400B8238A /* ManageSection */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEB2B229495ABB00B8238A /* SignInManager.swift */,
+				D2DEB2B629495B3D00B8238A /* SignInNormal */,
+				D2DEB2B729495B4A00B8238A /* SignInSocial */,
+				D2DEB2B429495AC000B8238A /* ValidateManager.swift */,
+			);
+			path = ManageSection;
+			sourceTree = "<group>";
+		};
+		D2DEB2B629495B3D00B8238A /* SignInNormal */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEB2B82949629000B8238A /* NormalSignInWorker.swift */,
+			);
+			path = SignInNormal;
+			sourceTree = "<group>";
+		};
+		D2DEB2B729495B4A00B8238A /* SignInSocial */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEB2BA2949630D00B8238A /* AppleSignInWorker.swift */,
+				D2DEB2BC2949631500B8238A /* KakaoSignInWorker.swift */,
+			);
+			path = SignInSocial;
 			sourceTree = "<group>";
 		};
 		E936B2F0F3C7687173D0C8AC /* Pods */ = {
@@ -196,9 +255,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2DEB2B329495ABB00B8238A /* SignInManager.swift in Sources */,
+				D2DEB2C129498CC700B8238A /* URLConfigure.swift in Sources */,
 				D2DEB2A029485E4C00B8238A /* SignIn_Up.docc in Sources */,
+				D2DEB2BF294989FD00B8238A /* EndPoint.swift in Sources */,
 				D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */,
+				D2DEB2B92949629000B8238A /* NormalSignInWorker.swift in Sources */,
+				D2DEB2B529495AC000B8238A /* ValidateManager.swift in Sources */,
 				D2DEB2AA2948684500B8238A /* NetworkReturnModel.swift in Sources */,
+				D2DEB2C329498D7D00B8238A /* HTTPMethod.swift in Sources */,
+				D2DEB2BB2949630D00B8238A /* AppleSignInWorker.swift in Sources */,
+				D2DEB2BD2949631500B8238A /* KakaoSignInWorker.swift in Sources */,
+				D2DEB2B02949559400B8238A /* ValidityCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

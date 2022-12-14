@@ -13,4 +13,9 @@ target 'SignIn_Up' do
   # RxSwift
   pod 'RxSwift'
 
+  # Kakao
+  pod 'KakaoSDKCommon' , '~> 2.11.1'
+  pod 'KakaoSDKAuth'  , '~> 2.11.1'
+  pod 'KakaoSDKUser' , '~> 2.11.1'
+
 end

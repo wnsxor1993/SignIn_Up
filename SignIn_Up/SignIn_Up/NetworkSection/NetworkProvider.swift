@@ -8,25 +8,27 @@
 import RxSwift
 import Moya
 
-struct NetworkProvider<T: TargetType> {
+struct NetworkProvider {
     
-    typealias Service = T
-    
-    private let service = MoyaProvider<Service>()
-    
-    func request(with section: Service) -> Single<NetworkReturnModel> {
+    static func request(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
+        var urlRequest = URLRequest(url: endPoint.url)
+        urlRequest.httpMethod = endPoint.mehtod.rawValue
+        urlRequest.setValue(endPoint.headerValue, forHTTPHeaderField: endPoint.headerType)
+        urlRequest.httpBody = endPoint.body
         
-        return Single<NetworkReturnModel>.create { observer -> Disposable in
-            
-            self.service.request(section) { result in
-                switch result {
-                case .success(let response):
-                    let model = NetworkReturnModel(data: response.data, statusCode: response.statusCode)
-                    observer(.success(model))
-                    
-                case .failure(let error):
+        return .create { observer in
+            URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+                guard let httpRespone = response as? HTTPURLResponse else { return }
+                
+                if let error {
                     observer(.failure(error))
+                    
+                    return
                 }
+                
+                guard let data else { return }
+                
+                observer(.success(.init(data: data, statusCode: httpRespone.statusCode)))
             }
             
             return Disposables.create()
