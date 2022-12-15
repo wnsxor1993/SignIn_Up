@@ -6,15 +6,10 @@
 //
 
 import RxSwift
-import Moya
 
 struct NetworkProvider {
     
-    static func request(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
-        var urlRequest = URLRequest(url: endPoint.url)
-        urlRequest.httpMethod = endPoint.mehtod.rawValue
-        urlRequest.setValue(endPoint.headerValue, forHTTPHeaderField: endPoint.headerType)
-        urlRequest.httpBody = endPoint.body
+    static func request(with urlRequest: URLRequest) -> Single<NetworkReturnModel> {
         
         return .create { observer in
             URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in

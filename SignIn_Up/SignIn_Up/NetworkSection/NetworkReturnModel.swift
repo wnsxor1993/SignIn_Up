@@ -9,6 +9,6 @@ import Foundation
 
 struct NetworkReturnModel {
     
-    let data: Data?
-    let statusCode: Int?
+    let data: Data
+    let statusCode: Int
 }

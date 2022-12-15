@@ -6,12 +6,11 @@
 //
 
 import RxSwift
-import Moya
 
 final class NormalSignInWorker {
     
-    func signIn(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
+    func signIn(with urlRequest: URLRequest) -> Single<NetworkReturnModel> {
         
-        return NetworkProvider.request(with: endPoint)
+        return NetworkProvider.request(with: urlRequest)
     }
 }

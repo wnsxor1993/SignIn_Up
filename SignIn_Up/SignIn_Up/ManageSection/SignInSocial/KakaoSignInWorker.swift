@@ -8,8 +8,13 @@
 import RxSwift
 import KakaoSDKAuth
 import KakaoSDKUser
+import KakaoSDKCommon
 
 final class KakaoSignInWorker {
+    
+    func initSDK(with appKey: String) {
+        KakaoSDK.initSDK(appKey: appKey)
+    }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let url = URLContexts.first?.url else { return }
@@ -29,9 +34,9 @@ final class KakaoSignInWorker {
             }
     }
     
-    func signIn(with endPoint: EndPoint) -> Single<NetworkReturnModel> {
+    func signIn(with urlRequest: URLRequest) -> Single<NetworkReturnModel> {
         
-        return NetworkProvider.request(with: endPoint)
+        return NetworkProvider.request(with: urlRequest)
     }
 }
 

@@ -18,9 +18,7 @@
 		D2DEB2B92949629000B8238A /* NormalSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2B82949629000B8238A /* NormalSignInWorker.swift */; };
 		D2DEB2BB2949630D00B8238A /* AppleSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BA2949630D00B8238A /* AppleSignInWorker.swift */; };
 		D2DEB2BD2949631500B8238A /* KakaoSignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BC2949631500B8238A /* KakaoSignInWorker.swift */; };
-		D2DEB2BF294989FD00B8238A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2BE294989FD00B8238A /* EndPoint.swift */; };
-		D2DEB2C129498CC700B8238A /* URLConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2C029498CC700B8238A /* URLConfigure.swift */; };
-		D2DEB2C329498D7D00B8238A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */; };
+		D2DEB2C5294AAAF700B8238A /* SignInCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEB2C4294AAAF700B8238A /* SignInCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,9 +36,7 @@
 		D2DEB2B82949629000B8238A /* NormalSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalSignInWorker.swift; sourceTree = "<group>"; };
 		D2DEB2BA2949630D00B8238A /* AppleSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInWorker.swift; sourceTree = "<group>"; };
 		D2DEB2BC2949631500B8238A /* KakaoSignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInWorker.swift; sourceTree = "<group>"; };
-		D2DEB2BE294989FD00B8238A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		D2DEB2C029498CC700B8238A /* URLConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfigure.swift; sourceTree = "<group>"; };
-		D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D2DEB2C4294AAAF700B8238A /* SignInCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +94,6 @@
 			children = (
 				D2DEB2A7294865BB00B8238A /* NetworkProvider.swift */,
 				D2DEB2A92948684500B8238A /* NetworkReturnModel.swift */,
-				D2DEB2BE294989FD00B8238A /* EndPoint.swift */,
-				D2DEB2C029498CC700B8238A /* URLConfigure.swift */,
 			);
 			path = NetworkSection;
 			sourceTree = "<group>";
@@ -108,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D2DEB2AF2949559400B8238A /* ValidityCase.swift */,
-				D2DEB2C229498D7D00B8238A /* HTTPMethod.swift */,
+				D2DEB2C4294AAAF700B8238A /* SignInCase.swift */,
 			);
 			path = CaseSection;
 			sourceTree = "<group>";
@@ -256,15 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DEB2B329495ABB00B8238A /* SignInManager.swift in Sources */,
-				D2DEB2C129498CC700B8238A /* URLConfigure.swift in Sources */,
 				D2DEB2A029485E4C00B8238A /* SignIn_Up.docc in Sources */,
-				D2DEB2BF294989FD00B8238A /* EndPoint.swift in Sources */,
 				D2DEB2A8294865BB00B8238A /* NetworkProvider.swift in Sources */,
 				D2DEB2B92949629000B8238A /* NormalSignInWorker.swift in Sources */,
 				D2DEB2B529495AC000B8238A /* ValidateManager.swift in Sources */,
 				D2DEB2AA2948684500B8238A /* NetworkReturnModel.swift in Sources */,
-				D2DEB2C329498D7D00B8238A /* HTTPMethod.swift in Sources */,
 				D2DEB2BB2949630D00B8238A /* AppleSignInWorker.swift in Sources */,
+				D2DEB2C5294AAAF700B8238A /* SignInCase.swift in Sources */,
 				D2DEB2BD2949631500B8238A /* KakaoSignInWorker.swift in Sources */,
 				D2DEB2B02949559400B8238A /* ValidityCase.swift in Sources */,
 			);
