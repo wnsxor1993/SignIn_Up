@@ -9,6 +9,31 @@ import RxSwift
 
 struct NetworkProvider {
     
+    enum URLMethod {
+        case GET
+        case POST
+        case PATCH
+        case DELETE
+    }
+    
+    static func makeUrlRequest(with url: String, method: URLMethod = .POST) -> Single<URLRequest> {
+        
+        return .create { observer in
+            guard let validURL = URL(string: url) else {
+                observer(.failure(RxError.noElements))
+                
+                return
+            }
+            
+            let urlRequest = URLRequest(url: validURL, method: method)
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            observer(.success(urlRequest))
+            
+            return Disposables.create()
+        }
+    }
+    
     static func request(with urlRequest: URLRequest) -> Single<NetworkReturnModel> {
         
         return .create { observer in
