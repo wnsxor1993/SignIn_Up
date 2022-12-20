@@ -9,7 +9,6 @@ import Foundation
 
 enum SignInCase {
     
-    case normal
     case kakao
     case apple
 }

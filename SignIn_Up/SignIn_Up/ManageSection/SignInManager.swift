@@ -41,27 +41,48 @@ open class SignInManager {
 extension SignInManager {
     
     /**
-        로그인 로직 수행 메서드
+        일반 로그인 로직 수행 메서드
      
         - parameters:
-            - urlRequest: 서버와의 로그인 관련 API 전달 (헤더에 Bearer \(token) 필수!!)
+            - urlRequest: 서버와의 로그인 관련 API 전달
+     
+        - returns:
+            statusCode와 Data 값을 지닌 Struct 리턴 (실패 시, error 값 전달)
+     */
+    func signInNormal(with urlRequest: URLRequest) -> Single<NetworkReturnModel> {
+        
+        return self.normalWorker.signIn(with: urlRequest)
+    }
+    
+    /**
+        소셜 로그인 로직 수행 메서드
+     
+        - parameters:
+            - urlRequest: 서버와의 로그인 관련 API 전달
             - signCase: 로그인을 수행할 수단
      
         - returns:
             statusCode와 Data 값을 지닌 Struct 리턴 (실패 시, error 값 전달)
      */
-    func signIn(with urlRequest: URLRequest, which signCase: SignInCase) -> Single<NetworkReturnModel> {
-        switch signCase {
-        case .normal:
-            return self.normalWorker.signIn(with: urlRequest)
-            
-        case .kakao:
-            return self.kakaoWorker.signIn(with: urlRequest)
-            
-        case .apple:
-            return self.appleWorker.signIn(with: urlRequest)
-        }
+    func signInSocial(with urlRequest: URLRequest, which signCase: SignInCase) -> Single<NetworkReturnModel> {
+        
+        return self.fetchToken(which: signCase)
+            .flatMap { token in
+                var needHeaderRequest = urlRequest
+                needHeaderRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                
+                switch signCase {
+                case .kakao:
+                    return self.kakaoWorker.signIn(with: needHeaderRequest)
+                    
+                case .apple:
+                    return self.appleWorker.signIn(with: needHeaderRequest)
+                }
+            }
     }
+}
+
+private extension SignInManager {
     
     /**
         소셜 로그인 토큰 요청 메서드
@@ -74,9 +95,6 @@ extension SignInManager {
      */
     func fetchToken(which signCase: SignInCase) -> Single<String> {
         switch signCase {
-        case .normal:
-            return .never()
-            
         case .kakao:
             return self.kakaoWorker.fetchAccessToken()
             
